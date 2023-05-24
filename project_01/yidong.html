@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont_01/iconfont.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid; */
+      }
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        height: 40px;
+        display: flex;
+        margin-top: 10px;
+      }
+      section {
+        flex: 1;
+        /* background: pink; */
+        /* overflow: auto; */
+      }
+      footer {
+        height: 70px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+      }
+      .top_left {
+        width: 70px;
+        margin-right: 10px;
+      }
+      .top_right {
+        width: 100px;
+        margin-left: 10px;
+        display: flex;
+      }
+      .top_right span {
+        font-size: 25px;
+        text-align: center;
+        line-height: 40px;
+        flex: 1;
+      }
+      .top_right span:first-child {
+        color: rgb(119, 119, 35);
+      }
+      .top_right span:last-child {
+        color: gray;
+      }
+      header > div:nth-child(2) {
+        flex: 1;
+      }
+      .top_center {
+        position: relative;
+      }
+      .top_center span {
+        position: absolute;
+        /* pointer-events: none; */
+      }
+      /* .top_center:focus + span,
+      .top_center:valid + span {
+        display: none;
+        background: yellow;
+      } */
+      .sousuo {
+        left: 6px;
+        top: 8px;
+        font-size: 25px;
+      }
+      .saomiao {
+        right: 6px;
+        top: 8px;
+        font-size: 25px;
+      }
+      .top_center input {
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        text-indent: 40px;
+        background: #edf1f5;
+        letter-spacing: 0.1em;
+        /* filter: blur(7px); */
+      }
+      .top_left {
+        display: flex;
+      }
+      .top_left div {
+        flex: 2;
+        text-align: center;
+        line-height: 40px;
+        font-size: 17px;
+      }
+      .top_left span {
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        color: rgb(62, 118, 134);
+        flex: 1;
+      }
+      /* header部分 */
+      section {
+        display: flex;
+        flex-direction: column;
+        background: #f7f8fc;
+      }
+      .lunbotu {
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url("img/222.webp");
+      }
+      .lunbotu > div {
+        width: 90%;
+        height: 90px;
+        margin: 0 auto;
+        border-radius: 20px 20px 0 0;
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .daohang {
+        display: flex;
+      }
+      .daohang > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .daohang > div > span {
+        text-align: center;
+        flex: 1;
+        font-size: 34px;
+        box-sizing: border-box;
+        padding-top: 15px;
+      }
+      .daohang > div:nth-child(1) span {
+        color: rgb(224, 224, 95);
+      }
+      .daohang > div:nth-child(2) span {
+        color: rgb(169, 20, 244);
+      }
+      .daohang > div:nth-child(3) span {
+        color: rgb(31, 132, 239);
+      }
+      .daohang > div:nth-child(4) span {
+        color: rgb(169, 216, 100);
+      }
+      .daohang > div div {
+        flex: 1;
+        text-align: center;
+      }
+      /* .daohang span{
+        text-;
+      } */
+      .liebiao {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .liebiao > div {
+        height: 70px;
+        width: 20%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+      .liebiao > div span {
+        text-align: center;
+        flex: 1;
+        font-size: 29px;
+        box-sizing: border-box;
+      }
+      .liebiao > div div {
+        text-align: center;
+        flex: 1;
+      }
+      .liebiao > div:hover {
+        background: rgb(187, 186, 186);
+      }
+      .youxing {
+        border: 1px solid;
+        display: flex;
+        width: 100%;
+        height: 40px;
+      }
+      .youxing > div {
+        display: flex;
+      }
+      .youxing > div:first-child {
+        text-align: center;
+        line-height: 40px;
+        flex: 4;
+      }
+      .youxing > div:last-child {
+        text-indent: 20px;
+        line-height: 40px;
+        flex: 1;
+      }
+
+      .linkman {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .top_1 {
+        display: flex;
+      }
+      .top_1 div:first-child {
+        margin-right: 20px;
+        width: 70px;
+        border-right: 1px solid;
+      }
+      .top_01 ~ div {
+        border: 1px solid;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0 7px 10px #c3b5b5;
+      }
+      .linkman div {
+        text-indent: 10px;
+      }
+      /* section部分 */
+      footer {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+      }
+      footer > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s;
+        /* text-align: center;
+        line-height: 70px;
+        font-size: 20px; */
+      }
+      footer > div:hover span {
+        color: skyblue;
+      }
+      footer > div span {
+        transition: 0.3s;
+        flex: 1;
+        text-align: center;
+        line-height: 35px;
+        font-size: 25px;
+      }
+      footer > div > span:nth-child(1) {
+        line-height: 35px;
+        font-size: 25px;
+      }
+      footer > div:nth-child(1) > span {
+        /* color: skyblue; */
+      }
+
+      footer > div div {
+        flex: 1;
+        text-align: center;
+      }
+      footer div span {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top_left">
+        <div>昆明</div>
+        <span class="iconfont icon-didiandingwei"></span>
+      </div>
+      <div class="top_center">
+        <input type="text" required />
+        <span class="sousuo iconfont icon-sousuo"></span>
+        <span class="saomiao iconfont icon-saoyisaosaomiao"></span>
+        <!-- 加图标 -->
+      </div>
+      <div class="top_right">
+        <span class="iconfont icon-dianhua"></span>
+        <span class="iconfont icon-xinxi"></span>
+      </div>
+    </header>
+    <section>
+      <div class="lunbotu">
+        <div class="daohang">
+          <div>
+            <span class="iconfont icon-ziyuan3"></span>
+            <div>门票·预约</div>
+          </div>
+          <div>
+            <span class="iconfont icon-cheliangfei2"></span>
+            <div>车辆租赁</div>
+          </div>
+          <div>
+            <span class="iconfont icon-luxianmingque"></span>
+            <div>行程规划</div>
+          </div>
+          <div>
+            <span class="iconfont icon-fujinjingqu"></span>
+            <div>景区导览</div>
+          </div>
+        </div>
+      </div>
+      <div class="liebiao">
+        <div>
+          <span class="iconfont icon-hua"></span>
+          <div>拍照识花</div>
+        </div>
+        <div>
+          <span class="iconfont icon-dingjiudian"></span>
+          <div>酒店</div>
+        </div>
+        <div>
+          <span
+            class="iconfont icon-changyonglvyouyewutubiao_fuzhi_jipiao"
+          ></span>
+          <div>机票</div>
+        </div>
+        <div>
+          <span class="iconfont icon-dache"></span>
+          <div>打车</div>
+        </div>
+        <div>
+          <span class="iconfont icon-zhaozhaocesuo"></span>
+          <div>找厕所</div>
+        </div>
+        <div>
+          <span class="iconfont icon-wenchuangyishu_icon"></span>
+          <div>文创藏品</div>
+        </div>
+        <div>
+          <span class="iconfont icon-ETCchongzhi"></span>
+          <div>ETC充值</div>
+        </div>
+        <div>
+          <span class="iconfont icon-lvhangtaocan-20"></span>
+          <div>旅行套餐</div>
+        </div>
+        <div>
+          <span class="iconfont icon-lvhang"></span>
+          <div>旅游用品</div>
+        </div>
+        <div>
+          <span class="iconfont icon-tousu"></span>
+          <div>投诉</div>
+        </div>
+      </div>
+      <hr />
+      <div class="youxing">
+        <div>
+          <div style="flex: 1">自由游</div>
+          <div style="flex: 1">跟团游</div>
+          <div style="flex: 1">定制游</div>
+        </div>
+        <div>筛选</div>
+      </div>
+      <div class="main">
+        <div class="linkman">
+          <div class="top_1">
+            <div>陈先生</div>
+            <div>电话：122233</div>
+          </div>
+          <div>出行时间：8:00-21:00</div>
+          <div>
+            出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+          </div>
+          <div>
+            <div>预期导游薪资:200</div>
+            <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+          </div>
+          <br />
+          <hr />
+        </div>
+        <div class="linkman">
+          <div class="top_1">
+            <div>陈先生</div>
+            <div>电话：122233</div>
+          </div>
+          <div>出行时间：8:00-21:00</div>
+          <div>
+            出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+          </div>
+          <div>
+            <div>预期导游薪资:200</div>
+            <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+          </div>
+          <br />
+          <hr />
+        </div>
+        <div class="linkman">
+          <div class="top_1">
+            <div>陈先生</div>
+            <div>电话：122233</div>
+          </div>
+          <div>出行时间：8:00-21:00</div>
+          <div>
+            出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+          </div>
+          <div>
+            <div>预期导游薪资:200</div>
+            <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+          </div>
+          <br />
+          <hr />
+        </div>
+        <div class="linkman">
+          <div class="top_1">
+            <div>陈先生</div>
+            <div>电话：122233</div>
+          </div>
+          <div>出行时间：8:00-21:00</div>
+          <div>
+            出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+          </div>
+          <div>
+            <div>预期导游薪资:200</div>
+            <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+          </div>
+          <br />
+          <hr />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <span class="iconfont icon-shouye"></span>
+        <div>首页</div>
+      </div>
+      <div>
+        <span class="iconfont icon-shequ"></span>
+        <div>社区</div>
+      </div>
+
+      <div>
+        <span class="iconfont icon-xiaoxi"></span>
+        <div>消息</div>
+      </div>
+
+      <div>
+        <span class="iconfont icon-luxianmingque"></span>
+        <div>行程</div>
+      </div>
+
+      <div>
+        <span class="iconfont icon-hua"></span>
+        <div>我的</div>
+      </div>
+    </footer>
+  </body>
+</html>

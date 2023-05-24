@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="iconfont_01/iconfont.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+    header {
+      height: 70px;
+      /* background: red; */
+    }
+    header > div > div {
+      display: flex;
+      /* flex-direction: column; */
+    }
+    section {
+      flex: 1;
+      /* background: green; */
+    }
+    footer {
+      height: 1000px;
+      background: green;
+    }
+    .box_h1 {
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      /* background: pink; */
+      display: flex;
+      box-shadow: 0 3px 10px #c3b5b5;
+    }
+    .box_h1 > div {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .box_h1 > div:hover {
+      background: #ff9d00;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .box_h1 > div > span {
+      height: 50%;
+      font-size: 17px;
+    }
+    .box_h1 > div > div {
+      /* height: 50%; */
+      flex: 1;
+      font-size: 17px;
+      overflow: hidden;
+    }
+    .box_h1 div:nth-child(8) {
+      /* background: red; */
+      margin-left: 30px;
+    }
+    .box_h1 div:last-child:hover {
+      color: black;
+      background: #ffffff;
+    }
+    .box_h1 div:nth-child(8):hover {
+      color: black;
+      background: #ffffff;
+    }
+    .box_h1 div:nth-child(9):hover {
+      color: black;
+      background: #ffffff;
+    }
+    .box_h1 div:nth-child(8) div span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #ffffff;
+      background: #ff9d00;
+      border: 1px solid #ff9d00;
+    }
+    .box_h1 div:nth-child(8) div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box_h1 div:nth-child(9) div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box_h1 div:nth-child(9) div span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #ff9d00;
+      border: 1px solid #ff9d00;
+    }
+    .box_h1 div:nth-child(8):hover div span {
+      background: #ffffff;
+      color: #ff9d00;
+    }
+    .box_h1 div:nth-child(9):hover div span {
+      background: #ff9d00;
+      color: white;
+    }
+    /* .box_h1 div:nth-child(8) div {
+      flex: 1;
+    } */
+    /* header部分 */
+    section {
+      display: flex;
+      flex-direction: column;
+      /* background: pink; */
+      overflow: auto;
+    }
+    .lunbotu {
+      margin-top: 70px;
+      width: 70%;
+      height: 500px;
+      /* background: #8c3232; */
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-image: url("img/222.webp");
+      background-size: 100% 100%;
+    }
+    .lunbotu > div {
+      height: 60px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+    .shurukuang {
+      display: flex;
+    }
+    .shurukuang input {
+      height: 25px;
+      width: 80%;
+      margin-bottom: 0;
+      display: block;
+      background: #ffffff;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    .shurukuang span {
+      width: 60px;
+      height: 25px;
+      margin-top: 3px;
+      margin-left: 7px;
+      margin-right: 10px;
+      font-size: 22px;
+      text-align: center;
+      /* line-height: 30px; */
+      background: #ff9d00;
+      color: #ffffff;
+      border-radius: 5px;
+    }
+    .daohang {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      font-size: 13px;
+    }
+    .daohang > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .daohang > div:hover {
+      background: #cfcedc;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .daohang > div:hover span {
+      color: #ff9d00;
+    }
+
+    .daohang > div span {
+      height: 50%;
+      text-align: center;
+      line-height: 100%;
+      font-size: 20px;
+    }
+    .daohang > div div {
+      height: 50%;
+      text-align: center;
+      line-height: 100%;
+      overflow: hidden;
+    }
+    .daohang > div:first-child {
+      margin-left: 10px;
+    }
+    .daohang > div:last-child {
+      margin-right: 10px;
+    }
+    .liebiao {
+      display: flex;
+      flex-wrap: wrap;
+      width: 60%;
+      height: 300px;
+      background: #eee;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-radius: 4px;
+      justify-content: space-around;
+    }
+    .liebiao > div {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      width: 17%;
+      height: 50px;
+      /* background: red; */
+      border-radius: 7px;
+      box-shadow: 0 10px 10px #857d7d;
+      transition: 0.3s;
+    }
+    .liebiao > div span {
+      text-align: center;
+      line-height: 100%;
+      font-size: 23px;
+    }
+    .liebiao > div div {
+      text-align: center;
+      line-height: 100%;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    .liebiao > div:hover {
+      background: #cfcedc;
+      text-align: center;
+      line-height: 100%;
+      margin-top: 5px;
+    }
+    .liebiao > div:hover span {
+      color: #ff9d00;
+    }
+    .liebiao > div:hover div {
+      color: #66838f;
+    }
+    hr {
+      height: 2px;
+      background: #eee;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 10px;
+      border-radius: 4px;
+      box-shadow: 0 3px 10px #857d7d;
+      margin-bottom: 10px;
+    }
+    .mbtn {
+      width: 70%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .mbtn button {
+      position: absolute;
+      right: -3px;
+      top: -20px;
+      background: transparent;
+      background: #ff9d00;
+      border: 1px solid #ff9d00;
+      height: 20px;
+      width: 40px;
+    }
+    .mbtn button:hover {
+      box-shadow: 0 8px 10px #857d7d;
+    }
+    /* sectiton上方导航栏部分 */
+    .contain {
+      width: 950px;
+      height: 200px;
+      /* background: red; */
+      display: flex;
+      margin: 0 auto;
+    }
+    .zuo {
+      width: 245px;
+      /* border-right: 1px solid; */
+      margin-right: 40px;
+    }
+    .you {
+      width: 660px;
+      /* border: 1px solid; */
+    }
+    .zuo > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+    .top {
+      position: relative;
+      display: flex;
+      width: 100%;
+      /* border: 1px solid; */
+      height: 20px;
+    }
+    .top a {
+      position: absolute;
+      right: 0;
+      color: #999999;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .top a:hover {
+      text-decoration: underline;
+    }
+    .box-img {
+      width: 100%;
+      height: 130px;
+      margin-top: 20px;
+    }
+    img {
+      width: 100%;
+      height: 130px;
+    }
+    /* 左侧区域 */
+    .top_01 {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      background: #fffdfd;
+    }
+    .top_01 div {
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+      border: 2px solid #c3b5b5;
+      border-radius: 4px;
+      transition: 0.4s;
+    }
+    .top_01 div:hover {
+      background: #cfcedc;
+      box-shadow: 0 7px 10px #c3b5b5;
+    }
+    .linkman {
+      display: flex;
+      flex-direction: column;
+    }
+    .top_1 {
+      display: flex;
+    }
+    .top_1 div:first-child {
+      margin-right: 20px;
+      width: 70px;
+      border-right: 1px solid;
+    }
+    .top_01 ~ div {
+      border: 1px solid;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 7px 10px #c3b5b5;
+    }
+    .linkman div {
+      text-indent: 10px;
+    }
+    /* 右侧区 */
+    /* .top_01 div:first-child {
+      border-right: 2px solid;
+    } */
+  </style>
+  <body>
+    <header>
+      <div class="box_h1">
+        <div></div>
+        <div>
+          <span class="iconfont icon-shouye"></span>
+          <div>首页</div>
+        </div>
+        <div>
+          <span class="iconfont icon-gonglve"></span>
+          <div>导游攻略</div>
+        </div>
+        <div>
+          <span class="iconfont icon-hangcheng"></span>
+          <div>行程</div>
+        </div>
+        <div>
+          <span
+            class="iconfont icon-changyonglvyouyewutubiao_fuzhi_jipiao"
+          ></span>
+          <div>机票</div>
+        </div>
+        <div>
+          <span class="iconfont icon-dingjiudian"></span>
+          <div>订酒店</div>
+        </div>
+        <div>
+          <span class="iconfont icon-shequ"></span>
+          <div>社区</div>
+        </div>
+
+        <div>
+          <div><span class="iconfont icon-qq-copy"></span></div>
+        </div>
+        <div>
+          <div><span class="iconfont icon-weixin"></span></div>
+        </div>
+        <div><a style="cursor: pointer">登录</a></div>
+      </div>
+    </header>
+    <section>
+      <div class="lunbotu">
+        <div>
+          <div class="shurukuang">
+            <input type="text" placeholder="请输入您要搜索的内容" />
+            <span class="iconfont icon-sousuo" style="font-size: 16"></span>
+          </div>
+          <div class="daohang">
+            <div>
+              <span class="iconfont icon-ziyuan3"></span>
+              <div>门票预约</div>
+            </div>
+            <div>
+              <span class="iconfont icon-cheliangfei2"></span>
+              <div>车辆租赁</div>
+            </div>
+            <div>
+              <span class="iconfont icon-luxianmingque"></span>
+              <div>行程规划</div>
+            </div>
+            <div>
+              <span class="iconfont icon-fujinjingqu"></span>
+              <div>景区预览</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="liebiao">
+        <div>
+          <span class="iconfont icon-hua"></span>
+          <div>拍照识花</div>
+        </div>
+        <div>
+          <span class="iconfont icon-dingjiudian"></span>
+          <div>酒店</div>
+        </div>
+        <div>
+          <span
+            class="iconfont icon-changyonglvyouyewutubiao_fuzhi_jipiao"
+          ></span>
+          <div>机票</div>
+        </div>
+        <div>
+          <span class="iconfont icon-dache"></span>
+          <div>打车</div>
+        </div>
+        <div>
+          <span class="iconfont icon-zhaozhaocesuo"></span>
+          <div>找厕所</div>
+        </div>
+        <div>
+          <span class="iconfont icon-wenchuangyishu_icon"></span>
+          <div>文创藏品</div>
+        </div>
+        <div>
+          <span class="iconfont icon-ETCchongzhi"></span>
+          <div>ETC充值</div>
+        </div>
+        <div>
+          <span class="iconfont icon-lvhangtaocan-20"></span>
+          <div>旅行套餐</div>
+        </div>
+        <div>
+          <span class="iconfont icon-lvhangtaocan-20"></span>
+          <div>旅游用品</div>
+        </div>
+        <div>
+          <span class="iconfont icon-tousu"></span>
+          <div>投诉</div>
+        </div>
+      </div>
+      <hr style="" />
+      <div class="mbtn"><button>筛选</button></div>
+      <div class="contain">
+        <div class="zuo">
+          <div class="gonglue">
+            <div class="top">
+              <div>旅游攻略推荐</div>
+              <a href="#">更多</a>
+            </div>
+            <div class="box-img">
+              <img src="img/111.png" />
+            </div>
+            <p>楚雄行前必看</p>
+          </div>
+          <div class="gonglue">
+            <div class="top">
+              <div>旅游攻略推荐</div>
+              <a href="#">更多</a>
+            </div>
+            <div class="box-img">
+              <img src="img/111.png" />
+            </div>
+            <p>楚雄行前必看</p>
+          </div>
+          <div class="gonglue">
+            <div class="top">
+              <div>旅游攻略推荐</div>
+              <a href="#">更多</a>
+            </div>
+            <div class="box-img">
+              <img src="img/111.png" />
+            </div>
+            <p>楚雄行前必看</p>
+          </div>
+        </div>
+        <div class="you">
+          <div class="top_01">
+            <div>自由行</div>
+            <div>跟团游</div>
+            <div>定制游</div>
+          </div>
+          <div class="linkman">
+            <div class="top_1">
+              <div>陈先生</div>
+              <div>电话：122233</div>
+            </div>
+            <div>出行时间：8:00-21:00</div>
+            <div>
+              出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+            </div>
+            <div>
+              <div>预期导游薪资:200</div>
+              <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+            </div>
+          </div>
+          <div class="linkman">
+            <div class="top_1">
+              <div>陈先生</div>
+              <div>电话：122233</div>
+            </div>
+            <div>出行时间：8:00-21:00</div>
+            <div>
+              出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+            </div>
+            <div>
+              <div>预期导游薪资:200</div>
+              <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+            </div>
+          </div>
+          <div class="linkman">
+            <div class="top_1">
+              <div>陈先生</div>
+              <div>电话：122233</div>
+            </div>
+            <div>出行时间：8:00-21:00</div>
+            <div>
+              出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+            </div>
+            <div>
+              <div>预期导游薪资:200</div>
+              <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+            </div>
+          </div>
+          <div class="linkman">
+            <div class="top_1">
+              <div>陈先生</div>
+              <div>电话：122233</div>
+            </div>
+            <div>出行时间：8:00-21:00</div>
+            <div>
+              出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+            </div>
+            <div>
+              <div>预期导游薪资:200</div>
+              <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+            </div>
+          </div>
+          <div class="linkman">
+            <div class="top_1">
+              <div>陈先生</div>
+              <div>电话：122233</div>
+            </div>
+            <div>出行时间：8:00-21:00</div>
+            <div>
+              出行路线圆通山——>翠湖——>国立西南联合大学旧址——>xx傣味餐厅——>xx酒店
+            </div>
+            <div>
+              <div>预期导游薪资:200</div>
+              <div>组团人数&nbsp;&nbsp;&nbsp;&nbsp;5/10</div>
+            </div>
+          </div>
+        </div>
+        <!-- <div style="height: 100%; display: flex">
+          <div
+            class="xian"
+            style="width: 3px; border: 2px solid; margin-left: 40px"
+          ></div>
+        </div> -->
+      </div>
+    </section>
+    <!-- <footer></footer> -->
+  </body>
+</html>
